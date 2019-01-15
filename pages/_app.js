@@ -8,6 +8,11 @@ export default class MyApp extends App {
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
+      pageProps.user = {
+        id: 999,
+        userFirstName: "peterxx1",
+        userLastName: "kellnerxx1"
+      };
     }
 
     return { pageProps };
